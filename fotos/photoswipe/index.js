@@ -4,10 +4,11 @@ var lightbox = new PhotoSwipeLightbox({
 	// dynamic import is not supported in UMD version
 	pswpModule: PhotoSwipe,
 	spacing: 0.5, // 50% of viewport width
-	maxWidthToAnimate: 1200,
 	
-	showHideAnimationType: 'zoom',
-	showHideAnimationType: 'fade', //showHideAnimationType: 'none',
+	maxWidthToAnimate: 1200,	
+	//showHideAnimationType: 'zoom',
+	//showHideAnimationType: 'fade', 
+	showHideAnimationType: 'none',
 
 	// optionally disable zoom transition,
 	// to create more consistent experience
