@@ -1,7 +1,9 @@
-import PhotoSwipeLightbox from 'https://fotos.desafioxadrez.com.br/fotos/photoswipe/dist/photoswipe-lightbox.esm.js';
-const lightbox = new PhotoSwipeLightbox({
-  gallery: '#my-gallery',
-  children: 'a',
-  pswpModule: () => import('https://fotos.desafioxadrez.com.br/fotos/photoswipe/dist/photoswipe.esm.js')
+var lightbox = new PhotoSwipeLightbox({
+gallery: '.my-gallery',
+children: 'a',
+// dynamic import is not supported in UMD version
+pswpModule: PhotoSwipe 
 });
 lightbox.init();
+    
+//gallery: '#my-gallery',
