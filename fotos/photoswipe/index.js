@@ -1,8 +1,10 @@
 var lightbox = new PhotoSwipeLightbox({
-gallery: '#my-gallery',
-children: 'a',
-// dynamic import is not supported in UMD version
-pswpModule: PhotoSwipe 
+	gallery: '#my-gallery',
+	children: 'a',
+	// dynamic import is not supported in UMD version
+	pswpModule: PhotoSwipe,
+	spacing: 0.5, // 50% of viewport width
+	maxWidthToAnimate: 800,
 });
 
 lightbox.on('uiRegister', function() {
