@@ -5,8 +5,16 @@ var lightbox = new PhotoSwipeLightbox({
 	pswpModule: PhotoSwipe,
 	spacing: 0.5, // 50% of viewport width
 	maxWidthToAnimate: 1200,
-	initialZoomLevel: 'fit', 
-	secondaryZoomLevel: 'fit', 
+	
+	showHideAnimationType: 'zoom',
+	showHideAnimationType: 'fade', //showHideAnimationType: 'none',
+
+	// optionally disable zoom transition,
+	// to create more consistent experience
+	zoomAnimationDuration: false,
+	
+	//initialZoomLevel: 'fit', 
+	//secondaryZoomLevel: 'fit', 
 	//imageClickAction: 'close',
 	//tapAction: 'close',
 
