@@ -20,7 +20,7 @@ var lightbox = new PhotoSwipeLightbox({
 	//tapAction: 'close',
 
   // tap delay is removed if set to false
-  doubleTapAction: false,
+  //doubleTapAction: false,
 });
 
 lightbox.on('uiRegister', function() {
