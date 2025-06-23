@@ -5,10 +5,10 @@ var lightbox = new PhotoSwipeLightbox({
 	pswpModule: PhotoSwipe,
 	spacing: 0.5, // 50% of viewport width
 	maxWidthToAnimate: 1200,
-	initialZoomLevel: 'fill', 
+	initialZoomLevel: 'fit', 
 	secondaryZoomLevel: 'fit', 
-	imageClickAction: 'close',
-	tapAction: 'close',
+	//imageClickAction: 'close',
+	//tapAction: 'close',
 
   // tap delay is removed if set to false
   doubleTapAction: false,
