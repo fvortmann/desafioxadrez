@@ -1,3 +1,5 @@
+alert(123) 
+
 var lightbox = new PhotoSwipeLightbox({
 gallery: '#my-gallery',
 children: 'a',
