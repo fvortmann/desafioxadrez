@@ -16,29 +16,18 @@ async function getImagesFromFolder() {
   }
 }
 
-function load() {
-
-	const imagesContainer = document.getElementById('idLoad'); // Um elemento div no HTML
-
-	// Chama a função para buscar a lista de imagens
-	getImagesFromFolder().then(imageNames => {
-	  imageNames.forEach(name => {
-		// Constrói a URL completa de cada imagem
-		const imageUrl = `https://seuservidor.com/imagens/${name}`;
-		
-		alert(imageUrl)
-		
-		const html = '<div>'+imageUrl+'</div>';
-	
-		// Cria um novo elemento <img>
-		/*const imgElement = document.createElement('img');
-		imgElement.src = imageUrl;
-		imgElement.alt = name; // Atributo alt é importante para acessibilidade*/
-	
-		// Adiciona a imagem ao contêiner na página
-		imagesContainer.appendChild(html);
+function load() {	
+	const div = document.getElementById('idLoad'); // Um elemento div no HTML //Apesar de ser const que nao pode mudar, o conteÃºdo interno ou propriedade de um obj pode mudar.
+	getImagesFromFolder().then(eventos => {
+		let table = '<table border=0 id="idFotos">' //let para definir a var como local, evitar nÃ£o declarar com const ou let e evitar declarar com var, atualmente Ã© assim em JS.
+		eventos.forEach(evento => {
+			const image = evento[0]
+			const desc = evento[1]
+			const path = image.substring(0,image.lastIndexOf("/")+1)
+			table += `<tr><td width="400px"><a href="index.htm?path=${path}"><img src="${image}" width="400px" height="200px"></a></td><td width="70px">&nbsp;</td>`
+			table += `<td align="center">${desc}</td><td width="70px">&nbsp;</td></tr><tr><td height="20px" colspan="4"></td></tr>`
 	  });
+	  div.innerHTML = table
 	});
-
 	
 }
