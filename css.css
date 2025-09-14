@@ -1,0 +1,35 @@
+a {
+  font-family: museo-w01-700, serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #186fba;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #990000;
+}
+
+font {
+	line-height: 1.6
+}
+
+.custom-button {
+  height: 40px; /* Altura do botão */
+  background-color: #1F8EED; /* Cor de fundo padrão */
+  color: white; /* Cor do texto */
+  border: 0;
+  padding: 0 20px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.custom-button:hover {
+  background-color: white; /* Nova cor de fundo ao passar o mouse */
+  color: #1F8EED;
+ border: 1px solid #1F8EED;
+}
