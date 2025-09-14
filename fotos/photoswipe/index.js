@@ -53,4 +53,4 @@ lightbox.on('uiRegister', function() {
   });
 });
 
-lightbox.init();
+//lightbox.init();
