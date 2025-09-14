@@ -25,6 +25,8 @@ getImagesFromFolder().then(imageNames => {
     const imageUrl = `https://seuservidor.com/imagens/${name}`;
 	
 	alert(imageUrl)
+	
+	const html = ( <div>{imageURL}</div>);
 
     // Cria um novo elemento <img>
     /*const imgElement = document.createElement('img');
@@ -32,6 +34,6 @@ getImagesFromFolder().then(imageNames => {
     imgElement.alt = name; // Atributo alt é importante para acessibilidade*/
 
     // Adiciona a imagem ao contêiner na página
-    //imagesContainer.appendChild(imgElement);
+    imagesContainer.appendChild(html);
   });
 });
