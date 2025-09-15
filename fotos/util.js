@@ -48,13 +48,13 @@ function getURLParam(param) {
 async function preCarregarImagens() {
 	const pathOrigin = window.location.origin;
 	const pathParam = getURLParam("path");
-	let div = "";
-	let a = '<a href="PATH" data-pswp-width="1200" data-pswp-height="800"><img src="PATH" width="300" height="300" alt="" /></a>&nbsp;&nbsp;';
-	for (let i = 0; i <= 150; i++) {
-		const pathIMG = `${pathOrigin}/${pathParam}/${i}.jpg`;
-		let aIMG = a.replaceAll("PATH", pathIMG)
-		//console.log(pathIMG)		
+	let div = document.getElementById('my-gallery');	
+	//let a = '<a href="PATH" data-pswp-width="1200" data-pswp-height="800"><img src="PATH" width="300" height="300" alt="" /></a>&nbsp;&nbsp;';
+
+	for (let i = 0; i <= 150; i++) {		
 		try {
+
+			const pathIMG = `${pathOrigin}/${pathParam}/${i}.jpg`;
 
 			// Cria uma promessa para tentar carregar a imagem
 			const promessaDeCarregamento = new Promise((resolve, reject) => {
@@ -64,15 +64,32 @@ async function preCarregarImagens() {
 				img.src = pathIMG;
 			});
 
+			
+			//let aIMG = a.replaceAll("PATH", pathIMG)
+			//console.log(pathIMG)		
+			let a = document.createElement('a');
+				a.href = pathIMG;
+				//a.dataset.pswpWidth = '1200'; // Usa .dataset para data-* attributes
+				//a.dataset.pswpHeight = '800';
+				//a.classList.add('aFoto');
+				a.className = 'aFoto';
+			let img = document.createElement('img');					
+				img.src = pathIMG;
+				img.width = 300;
+				img.height = 300;
+				img.alt = '';
+
+			a.appendChild(img);
+
 			// Aguarda o resultado da promessa
 			await promessaDeCarregamento;
-			div += aIMG;
+
+			div.appendChild(a)
 
 		} catch (error) {
 			// Gera erro se não encontrar a imagem, a promessa é rejeitada e o 'catch' é executado			
 			// O 'return' em uma função async dentro de um loop tem o mesmo efeito
 			// que o 'break'. Ele para a execução da função.
-			document.getElementById('my-gallery').innerHTML = div;
 			lightbox.init();
 			return;
 		}

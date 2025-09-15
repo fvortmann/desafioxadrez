@@ -16,8 +16,8 @@ font {
 }
 
 .custom-button {
-  height: 40px; /* Altura do botão */
-  background-color: #1F8EED; /* Cor de fundo padrão */
+  height: 40px; /* Altura do botï¿½o */
+  background-color: #1F8EED; /* Cor de fundo padrï¿½o */
   color: white; /* Cor do texto */
   border: 0;
   padding: 0 20px;
@@ -32,4 +32,10 @@ font {
   background-color: white; /* Nova cor de fundo ao passar o mouse */
   color: #1F8EED;
  border: 1px solid #1F8EED;
+}
+
+.aFoto  {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
