@@ -24,7 +24,7 @@ function load() {
 			const image = evento[0]
 			const desc = evento[1]
 			const path = image.substring(0,image.lastIndexOf("/"))
-			table += `<tr><td width="400px"><a href="evento.htm?path=${path}"><img src="${image}" width="400px" height="200px"></a></td><td width="70px">&nbsp;</td>`
+			table += `<tr><td width="400px"><a href="evento.htm?path=${path}"><img src="${image}" width="400px" height="200px" class="sombraIMG"></a></td><td width="70px">&nbsp;</td>`
 			table += `<td align="center">${desc}</td><td width="70px">&nbsp;</td></tr><tr><td height="20px" colspan="4"></td></tr>`
 	  });
 	  div.innerHTML = table
