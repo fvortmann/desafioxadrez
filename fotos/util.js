@@ -69,14 +69,14 @@ async function preCarregarImagens() {
 			//console.log(pathIMG)		
 			let a = document.createElement('a');
 				a.href = pathIMG;
-				//a.dataset.pswpWidth = '1200'; // Usa .dataset para data-* attributes
-				//a.dataset.pswpHeight = '800';
-				//a.classList.add('aFoto');
-				a.className = 'aFoto';
+				a.dataset.pswpWidth = '1200'; // Usa .dataset para data-* attributes
+				a.dataset.pswpHeight = '800';
+				a.classList.add('aFoto'); //Melhor que a.className que substitui todas as classes existentes.
 			let img = document.createElement('img');					
 				img.src = pathIMG;
 				img.width = 300;
 				img.height = 300;
+				img.classList.add('sombraIMG');
 				img.alt = '';
 
 			a.appendChild(img);
