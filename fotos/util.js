@@ -51,7 +51,7 @@ async function preCarregarImagens() {
 	let div = document.getElementById('my-gallery');	
 	//let a = '<a href="PATH" data-pswp-width="1200" data-pswp-height="800"><img src="PATH" width="300" height="300" alt="" /></a>&nbsp;&nbsp;';
 
-	for (let i = 0; i <= 150; i++) {		
+	for (let i = 0; i <= 150; i++) {
 		try {
 
 			const pathIMG = `${pathOrigin}/${pathParam}/${i}.jpg`;
